@@ -10,14 +10,14 @@ def display_menu():
 # загружаем записи из файла json
 def load_data():
     try:
-        with open('data.json', 'r') as file: # пытаемся открыть файл на чтение
+        with open('data1.json', 'r') as file: # пытаемся открыть файл на чтение
             data = json.load(file) # загружаем данные из файла в переменную data
     except FileNotFoundError: # если файл не найден
         data = [] # создаем пустой список данных
     return data # возвращаем загруженные данные
 # сохраняем записи в файл json
 def save_data(data):
-    with open('data.json', 'w') as file: # открываем файл на запись
+    with open('data1.json', 'w') as file: # открываем файл на запись
         json.dump(data, file, indent=4) # сохраняем данные в файл с отступами для удобства чтения
 # выводим все записи
 def display_all_entries(data):
